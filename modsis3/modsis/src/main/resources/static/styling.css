@@ -1,0 +1,112 @@
+/*sayfanın tamamına etki edecek yer*/
+*{
+    box-sizing: border-box;
+}
+
+/*body kısmına etkie edecek yer*/
+body{
+margin: 0;
+font-family: 'Open Sans', sans-serif;
+}
+
+/*menu id'li sectiona etki edecek yer*/
+#menu{
+    height: 80px;
+    background-color: lightgray;
+    padding: 0 20px;
+}
+
+#logo{
+    font-size: 40px;
+    line-height: 80px;
+    color: #545454;
+    float: left;
+}
+
+nav{
+    line-height: 80px;
+    float: right;
+}
+
+nav a:link{
+    text-decoration: none;
+    margin-right: 30px;
+    color: #545454;
+}
+
+nav a:hover{
+    border-bottom: solid gray;
+}
+
+nav a:visited{
+    text-decoration: none;
+    margin-right: 30px;
+    color: #545454;
+}
+
+.ikon{
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.img-fluid{
+    max-width: 100% ;
+    height: auto;
+}
+
+#anasayfa{
+    height: 400px;
+    background-image: url("../img/modsis-777.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#black{
+    height: 400px;
+    background-color: black;
+    opacity: 0.55;
+}
+
+#icerik{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#modeller{
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.card{
+
+    width: 320px;
+    height: 400px;
+    border: 1px solid #888 ;
+    border-radius: 20px;
+    padding: 0;
+    display: inline-block;
+
+}
+
+
+.card:hover{
+    border: 1px solid #414141;
+}
+
+.cardbaslik{
+    margin: 5%;
+    padding: 0;
+    font-size: 20px;
+    color: #545454;
+}
+
+.pcard{
+    padding-left: 10%;
+    padding-right: 10%;
+    color: #888;
+}
