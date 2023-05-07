@@ -1,19 +1,13 @@
 package com.NewModsis.Repository;
 
-import org.apache.catalina.User;
+import com.NewModsis.Entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
-
-@EnableJpaRepositories
 @Repository
-public interface UserRepository extends JpaRepository<User,Long>
-{
+public interface UserRepository extends JpaRepository<UserEntity, Long> {
+    Optional<UserEntity> findOneByEmailAndPassword(String email, String password);
 
-
-    Optional<User> findOneByEmailAndPassword(String email, String password);
-
-    User findByEmail(String email);
+    UserEntity findByEmail(String email);
 }

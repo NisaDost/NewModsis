@@ -17,8 +17,8 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public String saveUser(@RequestBody UserDto userDto) {
-        String firstName = userService.addUser(userDto);
+    public String saveUser(@RequestBody UserDto UserDto) {
+        String firstName = userService.addUser(UserDto);
         return firstName;
     }
 
@@ -28,4 +28,6 @@ public class UserController {
         return ResponseEntity.ok(loginResponse);
     }
 }
+
+
 

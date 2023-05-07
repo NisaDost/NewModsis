@@ -24,14 +24,14 @@ public class UserEntity{
     private String email;
 
     @Column(nullable = false)
-    private String encryptedPassword;
+    private String password;
 
     public UserEntity(Long id, String firstName, String lastName, String email, String encryptedPassword) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.encryptedPassword = encryptedPassword;
+        this.password = encryptedPassword;
     }
 
     public UserEntity() {
@@ -53,8 +53,8 @@ public class UserEntity{
         this.email = email;
     }
 
-    public void setEncryptedPassword(String encryptedPassword) {
-        this.encryptedPassword = encryptedPassword;
+    public void setPassword(String encryptedPassword) {
+        this.password = encryptedPassword;
     }
 
     public Long getId() {
@@ -73,7 +73,7 @@ public class UserEntity{
         return email;
     }
 
-    public String getEncryptedPassword() {
-        return encryptedPassword;
+    public String getPassword() {
+        return password;
     }
 }
