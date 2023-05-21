@@ -1,0 +1,131 @@
+/*sayfanın tamamına etki edecek yer*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background-image: url("/img/modsisart.jpg");
+    background-repeat: round;
+}
+
+.header{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    margin: 10px 10px;
+    height: 80px;
+}
+
+.black {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -100;
+}
+
+.supercontainer{
+    max-width: 400px;
+    max-height: 450px;
+    width: 100%;
+    border-radius: 8px;    
+}
+
+.container{
+    background-color: white;
+    padding:30px 30px;
+    width: 100%;
+    height: 70%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 1px 1px 200px black;
+}
+
+.headerlayout{
+    max-width: 400px;
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+
+.tabButton{
+    overflow: hidden;
+    background-color: lightgray;
+    border: none;
+    font-size: 20px;
+    height: 60px;
+    width:50%;
+    cursor: pointer;
+}
+
+.tabButton.active{
+    background-color: white;
+    color: #f39221;; 
+}
+
+
+.tabcontent {
+    animation: fadeEffect 0.8s;
+  }
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+.container form .input-box{
+    width: 100%;
+    height: 45px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.container form .input-box input{
+    border: none;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    background-color: lightgray;
+    text-indent: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.container form .input-box input:focus{
+    border: 1px solid #f39221;
+}
+
+.ad-soyad{
+    height: 100px;
+}
+
+.girisButon{
+    background-color: #f39221;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.girisButon:hover{
+    color: white;
+    background-color: #f39221;
+}
+
+.girisButon:focus{
+    color: white;
+    background-color: orange;
+
+}

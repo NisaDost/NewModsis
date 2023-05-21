@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--css düzenlemeleri için diğer dosyayla kurulan bağlantı-->
+    <link rel="stylesheet" href="/css/login.css">
+
+
+    <!--kullandığım font için bağlantı-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+
+    <!--ikonlar için kullandığım sayfa için bağlantı-->
+    <script src="https://kit.fontawesome.com/fc632914cb.js" crossorigin="anonymous"></script>
+   
+    
+    <link rel="icon" href="/img/favicon.png">
+    <title>Üye Girişi | Modsis</title>
+
+
+</head>
+
+<body onload="document.getElementById('defaultOpen').click();">
+
+    <div class="header">
+        <a href="https://www.modsis.com.tr/">
+            <img class="logo" src="/img/logo.png" alt="Modsis" style="height: 50px;">
+        </a>
+    </div>
+    
+    <div class="black"></div>
+    
+    <div class="supercontainer">
+
+        <div class="headerlayout">
+        
+            <!--sekme tuşları -->
+            <div class="TabButtons">
+
+                <button id="defaultOpen" class="tabButton" style="float: left; border-top-left-radius: 8px; " onclick="openTab(event, 'login')">Giriş Yap</button>
+
+                <button class="tabButton" style="float: right;     border-top-right-radius: 8px;" onclick="openTab(event, 'register')">Kayıt Ol</button>
+
+            </div>
+        </div>    
+
+        <div class="container">
+
+            <!--login sekme içerikleri -->
+            <div id="login" class="tabcontent">
+                <p style="font-size: 14px; text-align: center; margin: 0 0 20px 0; color: gray; ">Sipariş verebilmek için giriş yapmanız gerekiyor. Hesabınız yok mu? Hemen kaydolun!</p>
+
+                <form action="">
+                    <div>E-Posta</div>
+                    <div class="input-box">
+                        <input type="email" placeholder="birisi@örnek.com" required>
+                
+                    </div>
+                
+                    <div>Şifre</div>
+                    <div class="input-box">
+                        
+                        <input type="password" placeholder="********" minlength="8" required>
+                        <span style="float: right; font-size: 14px; margin-top: 5px;">
+                        <a href="">Şifremi Unuttum</a></span>
+                    </div>
+                
+                    <div >
+                        <input class="girisButon" type="submit" value="Giriş Yap">
+                    </div>
+            
+                </form>
+            </div>
+
+            <!--register sekme içerikleri -->
+            <div id="register" class="tabcontent">
+                <form action="">
+                    
+                    <div class="ad-soyad">
+                        <div style="float: left; width: 48%;">Ad</div>
+                        <div style="float: right; width: 48%;">Soyad</div>
+                    
+                        <div class="input-box" style="float: left; width: 48%;">
+                            <input type="fname" placeholder="Adınız" required>    
+                        </div>
+                        <div class="input-box" style="float: right; width: 48%;">
+                            <input type="lname" placeholder="Soyadınız" required>    
+                        </div>
+                    </div>
+
+                    <div>E-Posta</div>
+                    
+                    <div class="input-box">
+                        <input type="email" placeholder="birisi@örnek.com" required>
+                    </div>
+                
+                    <div>Şifre</div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Şifreniz en az 8 karakter olmalıdır." minlength="8" required>
+                    </div>
+                
+                    <div >
+                        <input class="girisButon" type="submit" value="Kayıt Ol">
+                    </div>
+            
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!--sekme scriptleri-->
+    <script src="js/login-register.js"></script>
+
+</body>
